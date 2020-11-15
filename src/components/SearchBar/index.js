@@ -5,13 +5,19 @@ import { useCallback, useState } from 'react';
 const SearchBar = ({ searchPhotos }) => {
   const [searchQuery, setSearchQuery] = useState('');
 
-  const searchQueryChangeHandler = useCallback((event) => {
-    setSearchQuery(event.target.value);
-  }, [])
-
   const searchSubmitHandler = useCallback(() => {
     searchPhotos(searchQuery);
-  }, [searchQuery])
+  }, [searchQuery]);
+
+  const searchQueryChangeHandler = useCallback((event) => {
+    setSearchQuery(event.target.value);
+  }, []);
+
+  const handleKeyDown = useCallback((event) => {
+    if (event.key === 'Enter') {
+      searchSubmitHandler();
+    }
+  }, [searchQuery]);
 
   return (
     <div className="search-bar">
@@ -19,6 +25,7 @@ const SearchBar = ({ searchPhotos }) => {
         autoFocus
         className="input"
         onChange={searchQueryChangeHandler}
+        onKeyDown={handleKeyDown}
         onSubmit={searchSubmitHandler}
         placeholder="Search photos..."
         type="text"
