@@ -1,0 +1,28 @@
+.search-bar{
+  margin: 20px auto;
+}
+
+.input{
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  width: clamp(200px, 80vw, 500px);
+  border: 1px solid #ddd;
+}
+
+.input:focus{
+  outline: none;
+}
+
+button{
+  background: #ddd;
+  padding: 6px 10px;
+  background: #ddd;
+  font-size: 17px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+}
+
+button:focus{
+  outline: none;
+}
