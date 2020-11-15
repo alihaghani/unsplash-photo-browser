@@ -1,0 +1,15 @@
+.filter-bar{
+  display: flex;
+  height: 20px;
+  width: 250px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h4{
+  color: gray;
+}
+
+select{
+  border: 1px solid #ddd;
+}
