@@ -1,6 +1,8 @@
 # Getting Started with Unsplash Photo Browser
 
-To run the application, run the following commands in the project directory:
+To run the application, create an Unsplash developer account and app. Then set `UNSPLASH_ACCESS_KEY` in `src/config.js` to your app's access key. 
+
+Then, run the following commands in the project directory:
 
 ```
 $ yarn && yarn start
