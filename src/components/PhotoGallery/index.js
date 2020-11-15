@@ -1,8 +1,7 @@
 import './styles.css';
 
-const PhotoGallery = ({ photos }) => {
-
-  return (
+const PhotoGallery = ({ photos }) =>
+  (
     <div className="photo-gallery-container">
       {
         photos.map(photo => (
@@ -18,7 +17,6 @@ const PhotoGallery = ({ photos }) => {
         ))
       }
     </div>
-  )
-};
+  );
 
 export default PhotoGallery;
