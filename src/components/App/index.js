@@ -4,7 +4,7 @@ import { filterPhotos } from '../../utils/filter';
 import { useCallback, useEffect, useState } from 'react';
 
 import { getPhotos, searchPhotos } from '../../utils/unsplash_api';
-import { getResultsText, getSizeFilterTooltip } from '../../utils/helpers';
+import { getResultsText } from '../../utils/helpers';
 import resultTypes from '../../constants/result_types';
 
 import FilterBar from '../FilterBar';
