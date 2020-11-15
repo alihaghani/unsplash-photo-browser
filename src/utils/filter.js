@@ -25,7 +25,6 @@ const doesPhotoPassLikesFilter = (photo, selectedFilters) => {
 
   // no filter is selected, everything passes
   if (!likesFilter) return true;
-  console.log(photo.likes);
   const likeBound = likeFilterBounds[likesFilter];
   return photo.likes > likeBound.lower;
 }
