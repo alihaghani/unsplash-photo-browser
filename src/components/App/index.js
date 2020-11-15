@@ -3,8 +3,10 @@ import './styles.css';
 import { useCallback, useEffect, useState } from 'react';
 
 import { getPhotos, searchPhotos } from '../../utils/unsplash_api';
-import PhotoGallery from '../PhotoGallery';
+import { getResultsText } from '../../utils/helpers';
 import resultTypes from '../../constants/result_types';
+
+import PhotoGallery from '../PhotoGallery';
 import SearchBar from '../../components/SearchBar';
 
 const App = () => {
@@ -53,6 +55,7 @@ const App = () => {
   return (
     <div className="App">
       <SearchBar searchPhotos={fetchSearchPhotos} />
+      <h2 className="results-text">{getResultsText(resultsConfig)}</h2>
       <PhotoGallery photos={photoResults} />
       <button
         className="load-more-button"
